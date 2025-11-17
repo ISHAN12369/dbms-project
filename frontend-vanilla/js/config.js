@@ -1,6 +1,6 @@
 // Configuration
 const CONFIG = {
-  API_BASE_URL: 'http://localhost:3000/api',
+  API_BASE_URL: 'https://dbmsproject-golxe7uzh-ishans-projects-95cb0167.vercel.app/api',
   MAX_OVERNIGHT_NIGHTS: 3,
   FILE_SIZE_LIMIT: 5 * 1024 * 1024, // 5MB
   ALLOWED_FILE_TYPES: ['image/jpeg', 'image/png', 'application/pdf'],
