@@ -53,14 +53,23 @@ process.on('unhandledRejection', (reason, p) => {
   console.error('Unhandled Rejection at:', p, 'reason:', reason);
 });
 
-const server = app.listen(PORT, '0.0.0.0', () => {
-  const addr = server.address();
-  const host = addr && addr.address ? addr.address : '0.0.0.0';
-  const port = addr && addr.port ? addr.port : PORT;
-  console.log(`Backend running on http://${host}:${port}`);
-  console.log(`Process PID: ${process.pid}`);
-});
+// For local development
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  const server = app.listen(PORT, '0.0.0.0', () => {
+    const addr = server.address();
+    const host = addr && addr.address ? addr.address : '0.0.0.0';
+    const port = addr && addr.port ? addr.port : PORT;
+    console.log(`Backend running on http://${host}:${port}`);
+    console.log(`Process PID: ${process.pid}`);
+  });
 
-server.on('error', (err) => {
-  console.error('Server error:', err);
-});
+  server.on('error', (err) => {
+    console.error('Server error:', err);
+  });
+}
+
+// Export for Vercel serverless
+module.exports = app;
+
+// Export for Vercel serverless
+module.exports = app;
