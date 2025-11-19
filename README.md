@@ -7,7 +7,7 @@ A complete hostel management solution with authentication, room allocation, gues
 ---
 
 ## 🔗 Live Demo  
-**Live App:** https://dbmsproject-frontend.netlify.app/  
+**Live App:** https://debanik213.github.io/hostdbms/
 **Demo Video:** https://drive.google.com/file/d/1ap8cw81U4JXssXhfq_ccCshHCnVNndfK/view?usp=sharing
 
 ---
